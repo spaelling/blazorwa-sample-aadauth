@@ -1,0 +1,18 @@
+﻿@page "/loggedin"
+@inherits IndexModel
+
+@* other loading animations https://loading.io/css/ *@
+
+@* https://blog.jonblankenship.com/2018/10/19/adding-a-loading-spinner-to-a-button-with-blazor/ *@
+@if (isDoingStuff)
+{
+    <button class="btn btn-primary float-left search disabled" disabled>
+        <div class="lds-hourglass"></div>
+    </button>
+}
+else
+{
+    <button class="btn btn-primary btn-outline-primary float-left search" @onclick="DoMoreStuff">
+        Do more stuff
+    </button>
+}

@@ -1,0 +1,20 @@
+@page "/"
+@inherits MainModel
+
+@if(IsLoggedIn())
+{
+    <div id="div_logggedin">
+        <button class="btn btn-primary btn-outline-primary float-left search" Disable>
+            Logged in
+    </button>
+    </div>
+}
+else
+{
+    <div id="div_login">
+        <p>Please login before you proceeed</p>
+        <button class="btn btn-primary btn-outline-primary float-left search" @onclick="Login">
+            Login
+    </button>
+    </div>
+}
